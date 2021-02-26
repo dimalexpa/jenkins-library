@@ -370,6 +370,7 @@ private deploy(script, Map configuration, NeoCommandHelper neoCommandHelper, doc
                     try {
                         sh neoCommandHelper.deployCommand()
                     } catch (e) {
+                        print e
                         error "[ERROR][${STEP_NAME}] The execution of the deploy command failed, see the log for details."
                     }
                     sh neoCommandHelper.restartCommand()
